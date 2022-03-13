@@ -7,6 +7,7 @@ My JVM study
 * https://github.com/gnu-andrew/jamvm  
 * https://github.com/cfriedt/jamvm  
 * https://gitee.com/Gonzo/jamvm-annotade  
+* https://github.com/weimingtom/jamvm  
 
 ## dalvik  
 * see https://github.com/weimingtom/wmt_dalvik_study  
