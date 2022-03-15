@@ -22,3 +22,5 @@ My JVM study
 
 ## jni  
 * https://github.com/cfriedt/fb4j  
+* https://github.com/libretro/libretro-JamVM  
+* https://github.com/hex007/freej2me  
