@@ -18,3 +18,7 @@ My JVM study
 
 ## phoneme  
 * https://github.com/pthalin/bittboy-j2me  
+* https://github.com/nikita36078/phoneME-android  
+
+## jni  
+* https://github.com/cfriedt/fb4j  
