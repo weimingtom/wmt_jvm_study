@@ -16,3 +16,5 @@ My JVM study
 
 ## avian  
 
+## phoneme  
+* https://github.com/pthalin/bittboy-j2me  
