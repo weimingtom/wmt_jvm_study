@@ -27,3 +27,6 @@ My JVM study
 
 ## IKVM.NET  
 * https://sourceforge.net/projects/ikvm/  
+
+## JavaInJava  
+* https://github.com/hborders/JavaInJava  
