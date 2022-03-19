@@ -8,6 +8,8 @@ My JVM study
 * https://github.com/cfriedt/jamvm  
 * https://gitee.com/Gonzo/jamvm-annotade  
 * https://github.com/weimingtom/jamvm  
+* jamvm-2.0.0_mingw_v1.zip  
+* msys_v11_jamvm_v1.rar  
 
 ## dalvik  
 * see https://github.com/weimingtom/wmt_dalvik_study  
