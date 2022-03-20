@@ -16,6 +16,7 @@ My JVM study
 * see https://github.com/weimingtom/wmt_dalvik_study  
 
 ## MIDP/CLDC RI, KVM    
+* http://java.coe.psu.ac.th/RefImp.html#JavaME  
 
 ## avian  
 
