@@ -11,6 +11,7 @@ My JVM study
 * jamvm-2.0.0_mingw_v1.zip  
 * msys_v11_jamvm_v1.rar  
 * https://github.com/ybin/blog_site_source/blob/master/_posts/jvm/jamvm-interpreter.md  
+* a_v7_success_jamvm_mingw.rar  
 
 ## dalvik  
 * see https://github.com/weimingtom/wmt_dalvik_study  
