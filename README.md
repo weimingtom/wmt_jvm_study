@@ -62,3 +62,6 @@ https://code.google.com/p/unladen-swallow/
 from mono-1.1.7.14.tar.gz\mono-1.1.7.14\web  
 * 嵌入式中的jvm  
 http://www.51hei.com/bbs/dpj-19124-1.html  
+
+## 开源JVM虚拟机  
+* https://blog.csdn.net/chiduokui9989/article/details/100852296  
