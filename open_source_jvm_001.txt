@@ -1,0 +1,54 @@
+https://blog.csdn.net/chiduokui9989/article/details/100852296
+
+开源JVM虚拟机
+
+chiduokui9989
+
+于 2016-08-26 21:52:00 发布
+
+306
+ 收藏
+文章标签： java 运维 c/c++
+版权
+收集的几个JVM以及.NET现实项目，供学习用。
+
+Hotspot
+http://hg.openjdk.java.net/ 官方的JVM
+
+ParparVM
+https://github.com/codenameone/CodenameOne/tree/master/vm 将java字节码翻译为C语言
+
+vmkit
+https://github.com/llvm-mirror/vmkit 基于LLVM的JVM和.NET虚拟机
+
+Bugvm
+https://github.com/bugvm/bugvm robovm闭源以后的衍生品
+
+Parrot
+https://github.com/parrot/parrot 多语言虚拟机
+
+OMR
+https://github.com/eclipse/omr IBM推出的虚拟机框架
+
+Jamvm
+https://github.com/cfriedt/jamvm 轻量级JVM
+
+avian
+https://github.com/ReadyTalk/avian 小型JVM
+
+.NET CoreCLI
+https://github.com/dotnet/coreclr 官方开源.NET运行时
+
+mono
+https://github.com/mono/mono 开源.NET运行时
+
+LLILC
+https://github.com/dotnet/llilc 基于LLVM的.NET实现
+
+其他
+https://github.com/liancheng/llvm-tutorial-cn
+https://github.com/jatovm/jato
+http://www.cacaojvm.org/
+转载于:https://my.oschina.net/chunquedong/blog/738511
+
+相关资源：一个开源的JVM_开源的jvm-Java文档类资源-CSDN文库
