@@ -1,0 +1,164 @@
+http://www.51hei.com/bbs/dpj-19124-1.html
+
+嵌入式中的jvm [复制链接]
+
+电梯直达
+跳转到指定楼层楼主
+ ID:262 发表于 2013-6-14 19:07 | 只看该作者 回帖奖励
+几年前在arm, powerpc, mips上编译了phoneme，并成功运行今
+天再次想把java移到arm，dsp(uclinux), powerpc上
+想到当前编译phoneme是如此地难和复杂，dalvik是不太可能了，在想还有没有其它方案。
+找找发现了以下：
+cacao
+jamvm
+上面只是jvm，还需要以下其中一个class库
+GNU ClassPath  （http://www.gnu.org/software/classpath/docs/hacking.html）
+IcedTea
+OpenJDK
+(其实IcedTea与OpenJDK是兄弟来的，也就是同源，OpenJDK是当前sun开源的jdk，但是由于有一些是属于第三方的，开不了源，只用
+二进制的，于是IcedTea就把这没开源的二进制实现了并开源）
+
+以下操作都是在ubuntu 10.10上进行，并以arm为例，powerpc等同例也
+安装openjdk（之前安装了sun jdk 6，所以把原来默认的openjdk给删除了，现在再安装回来）
+sudo apt-get install default-jdk
+
+查看/修改系统提供的JDK版本信息
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+classpath_0.98.orig.tar.gz
+编译并安装GNU ClassPath
+CC=arm-none-linux-gnueabi-gcc \
+LD=arm-none-linux-gnueabi-ld \
+AR=arm-none-linux-gnueabi-ar \
+RANLIB=arm-none-linux-gnueabi-ranlib \
+./configure \
+     --disable-gtk-peer \
+     --disable-alsa \
+     --disable-gconf-peer \
+     --disable-gstreamer-peer \
+     --disable-plugin \
+     --disable-tools \
+     --disable-examples \
+     --host=arm-none-linux-gnueabi \
+     --target=arm-none-linux-gnueabi \
+     --prefix=/opt/java/classpath
+make
+make install
+
+jamvm_1.5.3.orig.tar.gz
+编译并安装jamvm
+CC=arm-none-linux-gnueabi-gcc \
+LD=arm-none-linux-gnueabi-ld \
+AR=arm-none-linux-gnueabi-ar \
+RANLIB=arm-none-linux-gnueabi-ranlib \
+./configure \
+     --host=arm-none-linux-gnueabi \
+     --target=arm-none-linux-gnueabi \
+     --with-classpath-install-dir=/opt/java/classpath \
+     --prefix=/opt/java/jamvm
+make
+make install
+
+注意：
+1.由于jamvm是在编译时指定classpath的路径，所以，在把两个程序的目录复制到板子上时，需要按照编译时的安装目录位置
+（在./configure命令后由-prefix指定）。例如在PC上编译时jamvm被make install到/usr/local/jamvm,classpath在/usr/local/classpath。如要复制到arm板上，这两个目录还是要放在/usr/local/下。
+另一种方法是在运行时指定classpath的路径，详见jamvm usage，或者在系统环境变量中添加该路径。
+2. 其他运行时错误可以通过在jamvm命令下添加-verbose:jni 来追踪。
+
+HelloWorld
+文件：test.java
+public
+class test {
+    public static void main(String[] args) {
+        System.out.println("Hello! World!");
+    }
+}
+
+在pc上编译:
+javac test.java
+在pc上测试：
+java test
+
+把classpath,jamvm和test.class放到arm上,运行：
+/opt/java/jamvm/bin/jamvm test
+
+编译出错一(jamvm)：
+configure:error: zlib is missing
+可以安装/编译zlib（当然是对应平台的)
+也可以使用选项禁用掉：--disable-zlib
+
+运行出错一：
+Exceptionoccurred while VM initialising.
+java/lang/NoClassDefFoundError: java/lang/Class
+
+这是由于编译jamvm时使用了--disable-zlib选项引起的，原因就是找不到类库
+使用zlib时jamvm/share/jamvm/目录下有个classes.zip
+而不使用zlib时，就会把classese.zip解压出来，不过为什么还会出错，暂时没有研究出来。
+
+运行出错二：
+/opt/java/jamvm/bin/jamvm:/lib/libpthread.so.0: version `GLIBC_2.2.3' not found (required by /opt/java/jamvm/bin/jamvm)
+/opt/java/jamvm/bin/jamvm: /lib/libpthread.so.0: version `GLIBC_2.2' not found (required by /opt/java/jamvm/bin/jamvm)
+/opt/java/jamvm/bin/jamvm: /lib/libpthread.so.0: version `GLIBC_2.0' not found (required by /opt/java/jamvm/bin/jamvm)
+/opt/java/jamvm/bin/jamvm: /lib/libpthread.so.0: version `GLIBC_2.1' not found (required by /opt/java/jamvm/bin/jamvm)
+/opt/java/jamvm/bin/jamvm: /lib/libpthread.so.0: version `GLIBC_2.3.2' not found (required by /opt/java/jamvm/bin/jamvm)
+
+平台和编译搞错。如:
+6467平台使用arm_v5t_le- (我使用的是低版本的SDK，新版本的一样是：arm-none-linux-gnueabi)
+8168平台使用arm-none-linux-gnueabi-
+
+另一个jvm---cacao
+编译并安装
+CC=arm-none-linux-gnueabi-gcc \
+LD=arm-none-linux-gnueabi-ld \
+AR=arm-none-linux-gnueabi-ar \
+RANLIB=arm-none-linux-gnueabi-ranlib \
+./configure \
+     --host=arm-none-linux-gnueabi \
+     --target=arm-none-linux-gnueabi \
+     --build=i686-pc-linux-gnu \
+     --with-java-runtime-library-prefix=/opt/java/classpath
+make
+make install
+(由于交叉点编译也就是在make时需要用到pc上可运行的cacaoh，暂时还没解决这交叉编译的问题，所以还没有试通，后续会把它搞定的)
+
+
+后记一
+在移植这些的时候，在网上也了解了一下关于j2me的相关资料，还是比较复杂的，还有CDC，CLDC，MIDP等等，因为你要真正把classpath或openjdk移到自己的设备上，特别是有音频、视频、显示这些的设备，还真得深入了解了解，然后才能很好地去裁剪和移植。
+现在ARM的设备比较流行，不管是android手机还是iphone/ipad都是ARM。所以相对jamvm用得多一些，如果你iphone/ipad越狱后想使用java，你其实可以在里面进行安装jamvm或cacao，详细可以网上查查。
+再说说android，它使用的是dalvik vm，这是使用寄存器的vm栈，所以相对一般的jvm使用操作系统级vm栈会在性能上更强一些（还不清楚jamvm,cacao这些是哪种类型），但是dalvik vm移植上会更困难，因为你要非常清楚CPU的东东，而其它jvm你只要熟悉OS与jvm之关的接口关系就差不多了。
+还就是类库，之前说的phoneme其实已经包含了类库在里头（难怪这难编译，当然也与它的结构有关），现在还有classpath和openjdk等等，当然还少不了android。不过android与底层，包括linux kernel，平台都搞得太紧，如果你想把dalvik vm移到一个平台，然后不想用这复杂的android类库，转而使用classpath或openjdk，至少现在还不行，不过好像已经有人也想到了这个，说见IcedRobot项目。
+其实我也想使用高性能的dalvik然后再使用一个功能，简单的类库，这样方便移植或加东西，感觉android太庞大了。
+
+后记二
+一些国内的例子：
+1，淘宝使用openjdk进行改进，还在实现分布式和GPU来进行运算等，详见：http://jvm.taobao.org
+/index.php/首页
+2，minigui的mPeer就是在classpath进行移植的，好像主要是AWT之类的，jvm使用也是jamvm/cacao
+
+后记三
+不知能否把我现有的设备都装上jvm，再加上类库，就变成了j2me或j2se，甚至j2ee，然后就可以用这些设备打造自己的私有云！？哈哈
+
+后记四
+如果移植到现在cacao还不支持的平台上去呢？比如现在正在整的8核dsp上（使用uclinux）？
+如果移植类库？比如AWT之类的显示，还有视频，声音，输入等等
+下来有空的话会继续这个方面的东东
+分享到:  
+QQ好友和群QQ好友和群
+ 
+QQ空间QQ空间
+ 
+腾讯微博腾讯微博
+ 
+腾讯朋友腾讯朋友
+收藏收藏 
+分享淘帖 
+顶顶 
+踩踩
+回复举报
+
+沙发
+ ID:51862 发表于 2013-7-15 11:07 | 只看该作者
+我也遇到Exceptionoccurred while VM initialising.
+java/lang/NoClassDefFoundError: java/lang/Class
+，请问你解决了吗
