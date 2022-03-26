@@ -51,3 +51,12 @@ My JVM study
 
 ## jvm.go  
 * https://github.com/zxh0/jvm.go  
+
+## cacao, cacaojvm  
+* http://www.complang.tuwien.ac.at/cacaojvm/download/cacao-0.97/  
+http://www.complang.tuwien.ac.at/anton/cacao-interpreter.html  
+http://www.complang.tuwien.ac.at/anton/vmgen/  
+https://code.google.com/p/unladen-swallow/  
+from mono-1.1.7.14.tar.gz\mono-1.1.7.14\web  
+* 嵌入式中的jvm  
+http://www.51hei.com/bbs/dpj-19124-1.html  
