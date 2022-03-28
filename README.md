@@ -65,3 +65,15 @@ http://www.51hei.com/bbs/dpj-19124-1.html
 
 ## 开源JVM虚拟机  
 * https://blog.csdn.net/chiduokui9989/article/details/100852296  
+
+## todo  
+* https://github.com/dotnet/coreclr  
+https://github.com/dotnet/corefx  
+.NET Core 2.0应用程序高级调试  
+《编写高性能.NET代码》和《.NET Core 2.0应用程序高级调试》  
+* (IMP) interpreter模式(mono --interpreter)  
+只支持mono-5.20和mono-6.12，而且只支持xubuntu，不支持ubuntu 140432  
+* v8_20220327.tar.gz  
+v8.git-refs_tags_7.4.288.26.tar.gz  
+--jitless  
+node-v12.22.11.tar.gz  
