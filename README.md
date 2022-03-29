@@ -77,3 +77,10 @@ http://www.51hei.com/bbs/dpj-19124-1.html
 
 ## 开源JVM虚拟机  
 * https://blog.csdn.net/chiduokui9989/article/details/100852296  
+
+## c4  
+* https://github.com/EarlGray/c4  
+
+## llvm vmkit  
+* https://github.com/llvm-mirror/vmkit  
+* http://vmkit.llvm.org/  
