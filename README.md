@@ -24,6 +24,7 @@ node-v12.22.11.tar.gz
 * msys_v11_jamvm_v1.rar  
 * https://github.com/ybin/blog_site_source/blob/master/_posts/jvm/jamvm-interpreter.md  
 * **a_v7_success_jamvm_mingw.rar**  
+* work_jamvm_xubuntu_20220315_v1.tar.gz  
 
 ## dalvik  
 * see https://github.com/weimingtom/wmt_dalvik_study  
@@ -88,3 +89,9 @@ http://www.51hei.com/bbs/dpj-19124-1.html
 ## Apache Harmony DRLVM  
 * https://harmony.apache.org/subcomponents/drlvm/index.html  
 * https://github.com/apache/harmony  
+
+## llvm-lua  
+* llvm_lua-1.2.0_build.tar.gz  
+
+## mono5 makefile  
+* mono-5.20.1.34_makefile_xubuntu200464_v1.tar.gz  
