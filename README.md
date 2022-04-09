@@ -12,6 +12,7 @@ https://github.com/dotnet/corefx
 v8.git-refs_tags_7.4.288.26.tar.gz  
 --jitless  
 node-v12.22.11.tar.gz  
+* (TODO) kotlin: kirin_v2.rar  
 
 ## jamvm  
 * http://jamvm.sourceforge.net  
