@@ -22,6 +22,8 @@ https://github.com/FirestonnneTFM/Mozilla-Tamarin-Redux
 * (TODO) kotlin: kirin_v2.rar  
 * LLVM, lli    
 https://github.com/TannerJin/BitCodeInterpreter  
+https://github.com/MiniJavaCompiler/MiniJavaLLVM  
+llvm-lua  
 
 ## jamvm  
 * http://jamvm.sourceforge.net  
