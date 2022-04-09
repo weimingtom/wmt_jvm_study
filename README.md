@@ -12,6 +12,13 @@ https://github.com/dotnet/corefx
 v8.git-refs_tags_7.4.288.26.tar.gz  
 --jitless  
 node-v12.22.11.tar.gz  
+* avmplus  
+https://github.com/adobe-flash/avmplus  
+https://github.com/adobe/avmplus  
+https://github.com/Corsaair/redtamarin  
+https://github.com/haibocheng/tamarin-central  
+https://github.com/weimingtom/tamarin-central  
+https://github.com/FirestonnneTFM/Mozilla-Tamarin-Redux  
 * (TODO) kotlin: kirin_v2.rar  
 
 ## jamvm  
