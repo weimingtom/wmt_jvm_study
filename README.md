@@ -20,6 +20,8 @@ https://github.com/haibocheng/tamarin-central
 https://github.com/weimingtom/tamarin-central  
 https://github.com/FirestonnneTFM/Mozilla-Tamarin-Redux  
 * (TODO) kotlin: kirin_v2.rar  
+* LLVM, lli    
+https://github.com/TannerJin/BitCodeInterpreter  
 
 ## jamvm  
 * http://jamvm.sourceforge.net  
