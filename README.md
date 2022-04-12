@@ -21,6 +21,8 @@ https://github.com/weimingtom/tamarin-central
 https://github.com/FirestonnneTFM/Mozilla-Tamarin-Redux  
 https://www.iteye.com/category/328671  
 https://github.com/apache/flex-sdk/tree/master/modules/asc  
+https://github.com/dmsovetov/libavm2  
+https://github.com/weihuoya/redtamarin  
 * (TODO) kotlin: kirin_v2.rar  
 kotlinjs: kirin_v3.rar  
 * LLVM, lli    
