@@ -24,6 +24,7 @@ https://github.com/apache/flex-sdk/tree/master/modules/asc
 https://github.com/dmsovetov/libavm2  
 https://github.com/weihuoya/redtamarin  
 http://github.com/propella/tamacola  
+https://blog.csdn.net/weixin_39806288/article/details/115727374  
 * (TODO) kotlin: kirin_v2.rar  
 kotlinjs: kirin_v3.rar  
 * LLVM, lli    
