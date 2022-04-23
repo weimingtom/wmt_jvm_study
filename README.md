@@ -121,3 +121,10 @@ http://www.51hei.com/bbs/dpj-19124-1.html
 
 ## vm  
 * https://github.com/nothingcosmos/VM  
+
+## LLVM cookbook  
+* search baidupan, 28847.zip  
+* search baidupan, llvmcook.7z  
+
+## LLVM编译器实战教程  
+* ?  
