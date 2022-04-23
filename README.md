@@ -125,6 +125,7 @@ http://www.51hei.com/bbs/dpj-19124-1.html
 ## LLVM cookbook  
 * search baidupan, 28847.zip  
 * search baidupan, llvmcook.7z  
+* https://github.com/elongbug/llvm-cookbook  
 
 ## LLVM编译器实战教程  
 * search baidupan, 63197_LLVM编译器实战教程_示例代码.zip  
