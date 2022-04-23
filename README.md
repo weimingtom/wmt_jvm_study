@@ -127,4 +127,6 @@ http://www.51hei.com/bbs/dpj-19124-1.html
 * search baidupan, llvmcook.7z  
 
 ## LLVM编译器实战教程  
-* ?  
+* search baidupan, 63197_LLVM编译器实战教程_示例代码.zip  
+* http://www.hzcourse.com/web/teachRes/detail/4635/231  
+* https://github.com/xnxy/ReadingNotes/tree/master/LLVM编译器实战教程/示例代码/6924OS_Code  
