@@ -141,5 +141,11 @@ https://www.gnu.org/projects/dotgnu/pnet.html
 https://github.com/NETMF/netmf-interpreter
 * .NET Core, dotnetcore  
 https://github.com/dotnet/core
-* coreclr
-* 
+* CoreCLR  
+* .Net CF（Compact Framework）, closed source, ClockSample.MyClock, VS2010
+```
+原来如此，似乎是这样，Windows Mobile（如WM5和WM6）可以运行.NET CF的程序，
+也可以用C开发，不过可能是很旧的指令集，例如ARMV4I，那差不多是XScale的时候
+似乎是这样子，在vs2008是有.NET CF（用于远古的智能设备）的工程模板，也有模拟器
+（我看过，非常完整的系统，吃惊），但vs2010没了这个功能（可能单独分出来） ​​​  
+```
