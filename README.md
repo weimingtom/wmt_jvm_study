@@ -136,4 +136,7 @@ http://www.51hei.com/bbs/dpj-19124-1.html
 * https://dotgnu.org
 * https://www.mono-project.com
 * DotGNU Portable.NET  
-* https://www.gnu.org/projects/dotgnu/pnet.html
+https://www.gnu.org/projects/dotgnu/pnet.html
+* netmf-interpreter  
+* .NET Core, dotnetcore  
+https://github.com/dotnet/core  
