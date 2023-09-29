@@ -55,6 +55,10 @@ llvm-lua
 * https://github.com/ReadyTalk/avian  
 
 ## phoneme  
+* https://phonej2me.github.io
+* https://github.com/PhoneJ2ME/phonej2me.github.io/tree/master/downloads-10-06-2007  
+* https://github.com/magicus/phoneME
+* https://github.com/borman/phoneme-qtopia  
 * https://github.com/pthalin/bittboy-j2me  
 * https://github.com/nikita36078/phoneME-android  
 
