@@ -153,3 +153,7 @@ https://github.com/dotnet/core
 似乎是这样子，在vs2008是有.NET CF（用于远古的智能设备）的工程模板，也有模拟器
 （我看过，非常完整的系统，吃惊），但vs2010没了这个功能（可能单独分出来） ​​​  
 ```
+
+## 自己动手写Java虚拟机  
+* https://github.com/zxh0/jvmgo-book  
+* https://github.com/zxh0/jvm.go  
