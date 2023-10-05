@@ -158,3 +158,7 @@ https://github.com/dotnet/core
 ## 自己动手写Java虚拟机  
 * https://github.com/zxh0/jvmgo-book  
 * https://github.com/zxh0/jvm.go  
+
+## jamvm 1.0  
+* https://github.com/camark/neojam  
+* https://www.v2ex.com/t/405019  
