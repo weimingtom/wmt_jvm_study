@@ -165,3 +165,8 @@ https://github.com/dotnet/core
 
 ## pluotsorbet  
 * https://github.com/mozilla/pluotsorbet  
+
+## jikes, search 微博  
+* 【Linux应用程序开发(四)---移植jamvm+jikes到arm linux】  
+* https://jikes.sourceforge.net  
+* https://sourceforge.net/projects/jikes/files/Jikes/1.13/  
