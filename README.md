@@ -44,6 +44,8 @@ llvm-lua
 * https://github.com/ybin/blog_site_source/blob/master/_posts/jvm/jamvm-interpreter.md  
 * **a_v7_success_jamvm_mingw.rar**  
 * work_jamvm_xubuntu_20220315_v1.tar.gz  
+* (IMP) https://github.com/weimingtom/jamvm_mingw
+* (IMP) https://github.com/weimingtom/jamvm_linux
 
 ## dalvik  
 * see https://github.com/weimingtom/wmt_dalvik_study  
